@@ -1,0 +1,17 @@
+Como usamos redux:
+1- creamos el store(estado unico e ininmutable).Aqui habrán dos constantes
+initialState y reducer (principal, que invoca las acciones).
+2-las actions son objetos planos con minima informacion posible. Pero justamente
+por ser objetos planos se envuelven en funcion para poder ejecutar el reducer
+ActionCreator.
+3-Creamos reducer funciones que dicen como y donde cambiara el estado.
+reciben dos parametros state actual y action.Siempre devuelve un new state.
+es decir el store se comunica con la accion que debe terner un type
+y el type ejecuta el reducer.
+
+4-En la opcion de React : la libreria react-redux nos brinda  dos tres metodos
+principales.
+connect para conectar el componente a redux (preeviamente envolvemos la App
+en Providers ). mapStateToProps que nos permitira traer, leer el state.
+Y mapDispacheToProps que nos permitir usar el dispatch de redux para actualizar
+ese estado .
