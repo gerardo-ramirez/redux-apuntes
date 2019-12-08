@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { BrowserRouter } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 //Provider envuelve nuestra app asi podemos compartir el store.
-import  store from './store';
+import store from './store';
 //le pasamos el store como props.
 ReactDOM.render(
-  <Provider store ={store}><App /></Provider>,
+  <Provider store={store}><BrowserRouter><App /></BrowserRouter></Provider>,
   document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

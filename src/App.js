@@ -4,16 +4,15 @@ import './App.css';
 import Calculator from './components/calculator';
 import History from './components/History';
 import Contador from './components/contador';
+import Routes from './components/Routes';
 
 
 
 function App() {
   return (
     <div className="App">
-      <Calculator/>
-      <History/>
-      <h1> Hacemos un contador con redux</h1>
-      <Contador/>
+
+      <Routes />
     </div>
   );
 }
